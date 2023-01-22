@@ -1,0 +1,41 @@
+version: "2.0"
+
+services:
+  database:
+    image: "postgres"
+    container_name: database
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "ekip"
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - "sezer67_ekip:/var/lib/postgresql/data"
+      - ./ekip-db.sql:/docker-entrypoint-initdb.d/dump.sql
+
+  backend:
+    container_name: backend
+    build: ./ekip-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: 1234
+      DB_NAME: ekip
+      JWT_SECRET: ekip-secret
+    depends_on:
+      - database
+
+  frontend:
+    container_name: frontend
+    build: ./ekip-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+volumes:
+  sezer67_ekip: {}
