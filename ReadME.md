@@ -1,12 +1,10 @@
 # Ekip E-Ticaret
 
----
 
 Bu proje bir e ticaret uygulamasıdır. NodeJs SQL ve EC2 teknolojilerinde kendimi geliştirmek amacıyla yapıldı.
 
 ## Açıklama
 
----
 
 İçerisinde `React Redux AntD Tailwind Nest JWT WebSocket PostgreSql Typeorm` başta olmak üzere araçlar kullanılmıştır. Ürün anlizi SAtış analizi aylık analiz ve listeler oluşturulmaktadır.
 Müşteri Satıcı Admin Rollerinde 3 farklı hesap türü mevcuttur.  
@@ -40,11 +38,8 @@ Müşteri Satıcı Admin Rollerinde 3 farklı hesap türü mevcuttur.
 
 ## Kurulum
 
----
 
 Docker ile
-
----
 
 > docker-compose up --build  
 
@@ -53,8 +48,6 @@ Hazır veriler için sql dosyasını kullanma
 > Windows işletim sistemi kullanıyorsanız proje dizininde bulunan bash dosyası içerisindeki satır satır olucak şekilde komutları çalıştırın.
   
 Docker Olmadan
-
----
 
 Node Versiyonunuzu 12 ye çekin.
 
