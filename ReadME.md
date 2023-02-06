@@ -9,8 +9,8 @@ Bu proje bir e ticaret uygulamasıdır. NodeJs SQL ve EC2 teknolojilerinde kendi
 ---
 
 İçerisinde `React Redux AntD Tailwind Nest JWT WebSocket PostgreSql Typeorm` başta olmak üzere araçlar kullanılmıştır. Ürün anlizi SAtış analizi aylık analiz ve listeler oluşturulmaktadır.
-Müşteri Satıcı Admin Rollerinde 3 farklı hesap türü mevcuttur.
-&emsp;  **Müşteri İşlemleri**
+Müşteri Satıcı Admin Rollerinde 3 farklı hesap türü mevcuttur.  
+**Müşteri İşlemleri**
 
 - Bakiye Yükleme
 - Satın Alma
@@ -46,10 +46,12 @@ Docker ile
 
 ---
 
-> docker-compose up --build
-Hazır veriler için sql dosyasını kullanma
-> Linux işletim sistemi kullanıyorsanız proje dizininde ./docker-sql-import.sh komutunu çalıştırın.
+> docker-compose up --build  
+
+Hazır veriler için sql dosyasını kullanma  
+> Linux işletim sistemi kullanıyorsanız proje dizininde `./docker-sql-import.sh` komutunu çalıştırın.  
 > Windows işletim sistemi kullanıyorsanız proje dizininde bulunan bash dosyası içerisindeki satır satır olucak şekilde komutları çalıştırın.
+  
 Docker Olmadan
 
 ---
@@ -60,11 +62,11 @@ Node Versiyonunuzu 12 ye çekin.
 `cd frontend && npm install`
 
 Hazır veriler için sql dosyasını kullanma
-> sql dosyasının bulunduğu dizinde terminal açın.
-> `psql -U postgres` komutu ile postgres'e bağlanın.
-> `CREATE DATABASE "ekip";`
-> `exit`
-> `psql -U postgres ekip < ekip-db.sql`
+> sql dosyasının bulunduğu dizinde terminal açın.  
+> `psql -U postgres` komutu ile postgres'e bağlanın.  
+> `CREATE DATABASE "ekip";`  
+> `exit`   
+> `psql -U postgres ekip < ekip-db.sql`  
 adımlarından sonra sql verilerimiz eklenmiş olacaktır.
 
 3 Mevcut Hesap bilgileri
